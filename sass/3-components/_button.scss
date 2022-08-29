@@ -1,0 +1,13 @@
+.btn {
+   padding: 20px 35px;
+   background-color: var(--blue);
+   border: none;
+   font-weight: 500;
+   line-height: 19px;
+   color: var(--textLight);
+   cursor: pointer;
+   &:hover {
+      transition: box-shadow 0.3s;
+      box-shadow: 0 0 40px 6px rgba(64, 119, 243, 0.3);
+   }
+}

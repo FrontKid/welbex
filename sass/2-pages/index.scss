@@ -1,0 +1,92 @@
+@import "../1-helpers/mixin";
+/*font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;*/
+
+body {
+   font-family: "Inter", sans-serif;
+   background-color: var(--black);
+   font-size: 16px;
+   line-height: 25.6px;
+   color: var(--lightText);
+   font-weight: 400;
+}
+.header {
+   position: relative;
+   background-image: url(/img/index-header-img/Lights-Group.png);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: contain;
+   min-height: 100vh;
+}
+section {
+   height: 100vh;
+   background-color: var(--blue);
+}
+.header__content {
+   margin-top: 144px;
+}
+
+.header__content-inner {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+}
+
+.header__content-title {
+   font-size: 48px;
+   line-height: 58px;
+   font-weight: 400;
+   max-width: 362px;
+   span {
+      @include textGradient(var(--gradient));
+   }
+}
+.header__content-box-desc {
+   font-family: "Montserrat", sans-serif;
+   line-height: 22px;
+   font-size: 18px;
+   max-width: 275px;
+   margin: 27px 0 0 0;
+}
+
+.header__content-consultation {
+   max-width: 300px;
+   text-align: end;
+}
+.header__content-consultation-title {
+   font-size: 18px;
+   line-height: 22px;
+   font-weight: 500;
+   margin-bottom: 40px;
+   span {
+      text-transform: uppercase;
+      @include textGradient(var(--gradient));
+   }
+}
+.header__content-consultation-inner {
+   display: flex;
+   justify-content: space-between;
+}
+
+.header__content-consultation-inner-titile {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 22px;
+   text-align: right;
+   text-transform: uppercase;
+   letter-spacing: 0.05em;
+   margin-bottom: 6px;
+}
+.header__content-consultation-inner-text {
+   font-family: "Montserrat", sans-serif;
+   font-weight: 400;
+   font-size: 15px;
+   line-height: 20px;
+}
+.header__content-consultation-inner-text:not(:last-child) {
+   margin-bottom: 30px;
+}
+.header__content-form {
+   margin-top: 60px;
+}

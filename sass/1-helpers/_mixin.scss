@@ -1,0 +1,7 @@
+@mixin textGradient($general) {
+   display: inline-block;
+   background-color: var(--orange);
+   background: $general;
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
+}
