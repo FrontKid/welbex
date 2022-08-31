@@ -1,8 +1,6 @@
 'use strict';
 function smooth() {
-   //debugger
    let prevScrollpos = window.pageYOffset;
-   console.log(prevScrollpos);
 
    const logoDesc = document.getElementById("logo__desc");
    const headerHeight = document.getElementById("header").offsetHeight
@@ -10,7 +8,6 @@ function smooth() {
 
    const navbar = document.getElementById("navbar")
    const mobileNavInner = document.getElementById("mobile__nav-inner")
-   const logoColor = document.getElementById("logo--color")
 
 
    if (prevScrollpos < 0) {
@@ -36,10 +33,8 @@ function smooth() {
          }
       } else if (headerWidth <= 800) {
          if (prevScrollpos > currentScrollPos) {
-            mobileNavInner.style.visibility = 'visible'
             mobileNavInner.style.display = 'flex'
          } else {
-            mobileNavInner.style.visibility = 'hidden'
             mobileNavInner.style.display = 'none'
 
          }
@@ -48,5 +43,6 @@ function smooth() {
    }
 
 }
+
 
 smooth()

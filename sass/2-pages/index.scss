@@ -18,11 +18,9 @@ body {
    background-repeat: no-repeat;
    background-size: contain;
    min-height: 100vh;
+   padding-bottom: 158px;
 }
-section {
-   height: 100vh;
-   background-color: var(--blue);
-}
+
 .header__content {
    margin-top: 144px;
 }
@@ -68,6 +66,9 @@ section {
    display: flex;
    justify-content: space-between;
 }
+.header__content-consultation-inner-mobile {
+   display: none;
+}
 
 .header__content-consultation-inner-titile {
    font-weight: 500;
@@ -89,4 +90,163 @@ section {
 }
 .header__content-form {
    margin-top: 60px;
+}
+.header__content-form-mobile {
+   display: none;
+}
+@media (max-width: 1150px) {
+   .container {
+      padding: 0 15px;
+   }
+
+   //.header {
+   //   background-image: url(/img/index-header-img/Lights-Group-mobile.png);
+   //   background-position: 0 0;
+   //   background-size: cover;
+   //}
+}
+
+@media (max-width: 1050px) {
+   .header {
+      background-image: url(/img/index-header-img/Lights-Group-middle.png);
+   }
+   .header__content {
+      margin-top: 90px;
+   }
+   .header__content-inner {
+      flex-direction: column;
+   }
+   .header__content-consultation {
+      max-width: 100%;
+   }
+   .header__content-consultation {
+      text-align: center;
+   }
+   .header__content-consultation-inner {
+      justify-content: space-around;
+      margin: 0 auto;
+
+      max-width: 600px;
+   }
+
+   .header__content-consultation-inner-titile,
+   .header__content-consultation-inner-text {
+      max-width: 135px;
+
+      text-align: left;
+   }
+   .header__content-box-title {
+      margin-bottom: 90px;
+   }
+   .header__content-title {
+      max-width: 100%;
+   }
+   .header__content-box-desc {
+      max-width: 100%;
+   }
+   .header__content-form {
+      margin-top: 130px;
+   }
+   .header__content-form-mobile {
+      display: block;
+   }
+   .header__content-form-inner {
+      display: flex;
+      width: 100%;
+   }
+   .header__content-form-mobile--darkblue {
+      background-color: var(--darkBlue);
+   }
+}
+@media (max-width: 500px) {
+   .header {
+      background-image: url(/img/index-header-img/Lights-Group-mobile.png);
+      background-size: cover;
+      background-position: 0 -10vh;
+   }
+   .header__content-box-title {
+      margin-bottom: 45px;
+   }
+   .header__content-title {
+      font-size: 36px;
+      max-width: 272px;
+      line-height: 43px;
+      span {
+         font-weight: 900;
+      }
+   }
+   .header__content-box-desc {
+      max-width: 271px;
+      margin-top: 15px;
+   }
+   .header__content-consultation-title {
+      font-size: 18px;
+      line-height: 21px;
+      text-align: left;
+      max-width: 272px;
+      span {
+         text-transform: lowercase;
+      }
+   }
+   .header__content-consultation-inner {
+      display: none;
+   }
+
+   .header__content-consultation-inner-mobile {
+      display: block;
+   }
+   .header__content-consultation-inner-mobile-box {
+      display: flex;
+      justify-content: space-between;
+      max-width: 265px;
+      margin-top: 15px;
+   }
+   .header__content-consultation-inner-mobile-text {
+      font-family: "Montserrat", sans-serif;
+      font-size: 13px;
+      line-height: 15px;
+      text-transform: uppercase;
+      padding-left: 15px;
+      position: relative;
+      &::before {
+         content: "";
+         height: 1px;
+         width: 10px;
+         background-image: url(/img/index-header-img/smallline.png);
+         position: absolute;
+         top: 50%;
+         left: 0;
+      }
+   }
+   .header__content-form-inner {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 200px;
+   }
+}
+@media (max-width: 420px) {
+   .header__content-title {
+      font-size: 36px;
+      line-height: 44px;
+   }
+   .header__content-form-inner {
+      bottom: 220px;
+   }
+}
+@media (max-width: 413px) {
+   .header__content-form-inner {
+      bottom: 245px;
+   }
+}
+
+@media (max-width: 376px) {
+   .header__content-form-inner {
+      bottom: 180px;
+   }
+}
+@media (max-width: 361px) {
+   .header__content-form-inner {
+      bottom: 200px;
+   }
 }

@@ -224,6 +224,7 @@ template {
   --white: #fff;
   --black: #0e1014;
   --blue: #4077f3;
+  --darkBlue: #396adb;
   --darkGrey: #656566;
   --lightStroke: #25262c;
   --purple: #833ab4;
@@ -237,7 +238,9 @@ template {
 }
 
 .nav__bg {
-  padding: 32px;
+  position: relative;
+  z-index: 5;
+  padding: 32px 0;
   position: fixed;
   top: 0;
   width: 100%;
@@ -344,6 +347,7 @@ template {
   background-color: var(--blue);
   border: none;
   font-weight: 500;
+  font-size: 16px;
   line-height: 19px;
   color: var(--textLight);
   cursor: pointer;
@@ -351,4 +355,26 @@ template {
 .btn:hover {
   transition: box-shadow 0.3s;
   box-shadow: 0 0 40px 6px rgba(64, 119, 243, 0.3);
+}
+
+@media (max-width: 1050px) {
+  .btn {
+    width: 100%;
+    padding: 19px 17px;
+  }
+  .btn:hover {
+    box-shadow: none;
+  }
+}
+@media (max-width: 420px) {
+  .btn {
+    font-size: 15px;
+    padding: 19px 10px;
+  }
+}
+@media (max-width: 370px) {
+  .btn {
+    font-size: 13px;
+    padding: 19px 10px;
+  }
 }
