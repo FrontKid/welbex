@@ -1,3 +1,12 @@
-.acquaintance__title {
-   text-transform: capitalize;
+.title {
+   font-size: 48px;
+   line-height: 58px;
+}
+
+@media (max-width: 500px) {
+   .title {
+      font-size: 36px;
+      line-height: 44px;
+      max-width: 288px;
+   }
 }

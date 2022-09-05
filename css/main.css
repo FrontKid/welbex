@@ -31,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 400;
   margin: 0;
 }
 
@@ -115,6 +116,8 @@ textarea {
 button,
 input {
   overflow: visible;
+  background-color: transparent;
+  border: none;
 }
 
 button,
@@ -376,5 +379,17 @@ template {
   .btn {
     font-size: 13px;
     padding: 19px 10px;
+  }
+}
+.title {
+  font-size: 48px;
+  line-height: 58px;
+}
+
+@media (max-width: 500px) {
+  .title {
+    font-size: 36px;
+    line-height: 44px;
+    max-width: 288px;
   }
 }

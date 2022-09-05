@@ -5,3 +5,13 @@
    background-clip: text;
    -webkit-text-fill-color: transparent;
 }
+@mixin bgLight($width, $height, $color, $opacity, $filter) {
+   content: "";
+   width: $width;
+   height: $height;
+   background-color: $color;
+   border-radius: 50%;
+   opacity: $opacity;
+   filter: $filter;
+   position: absolute;
+}
