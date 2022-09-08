@@ -85,3 +85,29 @@ function playMobVideo() {
    })
 }
 playMobVideo()
+
+function hideText() {
+   const container = document.querySelector('.solving__inner-items')
+   const btn1Text = document.querySelector('.solving__inner-mobile-content-btn1')
+   const btn2Text = document.querySelector('.solving__inner-mobile-content-btn2')
+
+   container.addEventListener('click', current => {
+      const items = document.querySelectorAll('.solving__inner-mobile-btn')
+      const cur = current.target
+
+      items.forEach(item => {
+         item.classList.remove('solving__inner-mobile-btn--active')
+      })
+      cur.classList.add('solving__inner-mobile-btn--active')
+      if (cur.id === 'solving__mob-btn2') {
+         btn1Text.style.display = 'none'
+         btn2Text.style.display = 'block'
+      } else {
+         btn1Text.style.display = 'block'
+         btn2Text.style.display = 'none'
+      }
+
+   })
+}
+hideText()
+
