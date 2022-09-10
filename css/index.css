@@ -425,6 +425,45 @@ body {
   line-height: 26px;
 }
 
+.audit {
+  padding: 60px 0 150px 0;
+}
+
+.audit__title {
+  margin-bottom: 70px;
+}
+
+.audit__inner {
+  display: flex;
+  justify-content: space-between;
+}
+
+.audit__item-m1 {
+  max-width: 300px;
+}
+
+.audit__heading {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+}
+.audit__heading span {
+  display: inline-block;
+  background-color: var(--orange);
+  background: var(--gradient);
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.audit__text {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
 @media (max-width: 1150px) {
   .header__top {
     padding-left: var(--paddingLR);
@@ -449,6 +488,31 @@ body {
   .solving {
     padding-left: var(--paddingLR);
     padding-right: var(--paddingLR);
+  }
+  .audit {
+    padding-left: var(--paddingLR);
+    padding-right: var(--paddingLR);
+  }
+  .audit__form-desc {
+    position: static;
+    margin: 10px 0 0 0;
+    font-size: 12px;
+    line-height: 15px;
+    width: 100%;
+  }
+  .audit__form-send-inner {
+    padding-right: 0;
+  }
+  .audit__text {
+    font-size: 14px;
+    line-height: 17px;
+    margin-bottom: 20px;
+  }
+  .audit__form-number {
+    max-width: 100%;
+  }
+  .audit__btn {
+    width: 100%;
   }
 }
 @media (max-width: 1050px) {
@@ -766,6 +830,9 @@ body {
     margin: 40px 0 20px 0;
     font-size: 18px;
     line-height: 22px;
+  }
+  .audit__inner {
+    display: block;
   }
 }
 @media (max-width: 420px) {

@@ -110,4 +110,38 @@ function hideText() {
    })
 }
 hideText()
+function checkNumberValidate() {
+   const form = document.querySelector('.form')
+   const formTextInvalid = document.querySelector('.form__text-hide')
+   const formNumber = document.querySelector('.form__number')
 
+   formNumber.placeholder = '+38 068 733-61-68'
+
+   formNumber.onkeyup = (a) => {
+      const ignore = [
+         'Backspace', ')', '(', 'Escape', '-', '+', 'Shift', 'Alt',
+         'CapsLock', 'Control', 'Meta', 'Enter', 'ArrowRight', 'ArrowLeft', undefined
+      ];
+      const currentLetter = a.key
+
+      if (!isFinite(currentLetter) && !ignore.includes(currentLetter)) {
+         formNumber.value = ''
+         formNumber.classList.add('placeholder')
+         formNumber.placeholder = 'Используйте только цифры'
+      }
+   }
+   form.onsubmit = () => {
+      if (formNumber.value.length < 10) {
+         formNumber.classList.add('invalid')
+         formTextInvalid.classList.add('form__invalid-text')
+         formNumber.classList.remove('placeholder')
+         formNumber.placeholder = '+38 068 733-61-68'
+         return false
+      } else {
+         formNumber.classList.remove('invalid')
+         formTextInvalid.classList.remove('form__invalid-text')
+      }
+   }
+
+}
+checkNumberValidate()
